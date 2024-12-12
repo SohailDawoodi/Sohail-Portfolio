@@ -98,8 +98,8 @@ export const Img = styled.img`
   height: 100%;
   max-width: 400px;
   max-height: 400px;
-  border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
+  border-radius: 40%;
+  border: 3px solid ${({ theme }) => theme.primary};
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -146,7 +146,9 @@ export const TextLoop = styled.div`
 `;
 
 export const Span = styled.span`
-  color: ${({ theme }) => theme.primary};
+    background: linear-gradient(50deg, #07ad3e, #3980e3); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;;
   cursor: pointer;
 `;
 

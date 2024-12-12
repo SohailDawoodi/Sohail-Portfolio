@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import _default from '../../themes/default';
 
 export const Nav = styled.div`
-    background-color: ${({theme}) => theme.card_light};
+    background-color: #171721;
     height: 80px;
     display: flex;
     align-items: center;
@@ -35,13 +35,15 @@ export const NavLogo = styled(LinkR)`
     align-items: center;
     text-decoration: none;
     @media (max-width: 640px) {
-      padding: 0 0px;
+    padding: 0 0px;
+     
   }
 `;
 export const Span = styled.div`
-    padding: 0 4px;
+    // padding: 0 4px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
+  
 `;
 export const NavItems = styled.ul`
     width: 100%;
@@ -58,43 +60,61 @@ export const NavItems = styled.ul`
 `;
 
 export const NavLink = styled.a`
-    color: ${({ theme }) => theme.text_primary};
-    font-weight: 500;
+    position: relative; 
+    font-weight: 750;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     text-decoration: none;
-    :hover {
-      color: ${({ theme }) => theme.primary};
+    color: transparent;
+    background: linear-gradient(50deg, #07ad3e, #3980e3); 
+    -webkit-background-clip: text;
+    transition: all 0.3s ease-in-out;
+
+    :hover::after {
+        width: 100%; 
     }
 
-    &.active {
-      border-bottom: 2px solid ${({ theme }) => theme.primary};
+    &::after {
+        content: ''; 
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 3px; 
+        background: linear-gradient(90deg,  #ff6a00,#ffce00); 
+        transition: width 0.3s ease-in-out; 
     }
-`;
+
+    &.active::after {
+        width: 100%; 
+    }`
+  ;
 
 
 export const GitHubButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.primary};
+  // border: 1.8px solid #07ad3e ;
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.primary};
+  background: linear-gradient(90deg, #07ad3e, #3980e3); 
+  color:white;
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
   text-decoration: none;
   font-size: 16px;
   transition: all 0.6s ease-in-out;
-    :hover {
+   :hover {
       background: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.white};     
+      color: ${({ theme }) => theme.white}; 
+      border :none;    
     }
     @media screen and (max-width: 768px) { 
     font-size: 14px;
     }
 `;
+
 
 export const ButtonContainer = styled.div`
   width: 80%;  
@@ -133,7 +153,7 @@ export const MobileMenu = styled.div`
     right: 0;
     width: 100%;
     padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
+    background: ${({ theme }) => theme.card_light + 99};
     transition: all 0.6s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
     border-radius: 0 0 20px 20px;
@@ -190,7 +210,7 @@ export const MobileMenuButton = styled.a`
   }
 `;
 
-export  const MobileLink = styled.a`
+export const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;

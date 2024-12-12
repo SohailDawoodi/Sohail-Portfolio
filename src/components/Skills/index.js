@@ -9,6 +9,7 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
+margin-bottom:10px
 `
 
 const Wrapper = styled.div`
@@ -30,10 +31,13 @@ font-size: 42px;
 text-align: center;
 font-weight: 600;
 margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
+color: transparent;
+background: linear-gradient(50deg, #07ad3e, #3980e3); 
+-webkit-background-clip: text;
+transition: all 0.3s ease-in-out;
+@media (max-width: 768px) {
 margin-top: 12px;
-      font-size: 32px;
+font-size: 32px;
   }
 `;
 
@@ -79,7 +83,10 @@ const Skill = styled.div`
 const SkillTitle = styled.h2`
   font-size: 28px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
+  color:transparent;
+   background: linear-gradient(70deg, #be1adb, #854CE6,#fff ); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
   text-align: center;
 `
@@ -124,7 +131,7 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>Here are the key skills I have been learning and working since 2022 
+        <Desc>Here are the key skills I have been learning and working since 2022
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (
@@ -133,7 +140,7 @@ const Skills = () => {
               <SkillList>
                 {skill.skills.map((item) => (
                   <SkillItem>
-                    <SkillImage src={item.image}/>
+                    <SkillImage src={item.image} />
                     {item.name}
                   </SkillItem>
                 ))}
