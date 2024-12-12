@@ -8,6 +8,8 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience"
+import Education from "./components/Education";
+
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -35,6 +37,7 @@ function App() {
           <Skills />
           <Experience />
         </Wrapper>
+        <Education />
        
       </Body>
     </Router>
