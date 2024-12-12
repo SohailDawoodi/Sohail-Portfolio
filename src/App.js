@@ -28,6 +28,12 @@ function App() {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router >
         <Navbar />
+        <Body>
+          <HeroSection />
+          <Wrapper>
+            <Skills />
+          </Wrapper>
+        </Body>
       </Router>
     </ThemeProvider>
   );
