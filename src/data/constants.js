@@ -288,3 +288,51 @@ export const experiences = [
     ],
 }
 ];
+
+export const education = [
+  {
+    id: 0,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-rh9sWn-zE3a20yrf_suBbDptQusf_AJPnQ&s", 
+    school: "Herat University",
+    date: "Mar 2022 - May 2026", 
+    grade: "N/A", 
+    desc: "I am currently pursuing a Bachelor's degree in Software Engineering at Herat University. I have completed 4 semesters and have gained knowledge in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Web Development. I actively participate in university events and collaborate with my peers on projects to enhance my technical and teamwork skills.",
+    degree: "Bachelor of Science - BSc, Software Engineering",
+},
+{
+  id: 1,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQX8692GBPcvwSw9UU9-tHjInerarrjrwvAQ&s", 
+  school: "WASA Institute",
+  date: "Jan 2024 - Dec 2024",
+  grade: "Certified",
+  desc: "I worked as a Web Developer at WASA Institute, where I developed and maintained responsive and user-friendly web applications. My responsibilities included creating interactive interfaces, optimizing performance, and collaborating with backend teams to integrate APIs. Additionally, I implemented best practices for UI/UX design and ensured the scalability of web solutions.",
+  degree: "Web Development",
+},
+{
+  id: 2,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIpBtWj0ujbLQog6nuhF2yinLN5Sq9rDbeHA&s",
+  school: "Udemy Online Courses",
+  date: "2023",
+  grade: "Certified",
+  desc: "I completed an online course in Software Testing on Udemy, gaining practical knowledge in manual and automated testing methods. The course covered topics such as test case design, bug tracking, testing frameworks, and quality assurance best practices, enhancing my ability to ensure the reliability and functionality of software systems.",
+  degree: "Software Testing Certification",
+},
+{
+  id: 3,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy7w-ZbjTbuCHO-2YCnpxUoabDz9qSMDjA0g&s", 
+  school: "Nanont Institute",
+  date: "2024",
+  grade: "Certified",
+  desc: "I completed the International Computer Driving License (ICDL) certification at Nanont Institute, gaining proficiency in essential computer skills such as word processing, spreadsheets, presentations, IT security, and basic networking. This certification enhanced my technical expertise and improved my ability to use computer systems effectively.",
+  degree: "ICDL Certification",
+},
+{
+  id: 4,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAxvKM5L31qVhgwPNrE_O7PXSeP10HGZIo8w&s", 
+  school: "Sanai Institute",
+  date: "2022",
+  grade: "Completed",
+  desc: "I completed a Backend Development course at Sanai Institute, where I learned essential backend technologies such as Node.js, Express.js, RESTful APIs, and database management with MongoDB. This course helped me develop the skills to build scalable server-side applications and manage backend operations efficiently.",
+  degree: "Backend Development Certification",
+}, 
+];
