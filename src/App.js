@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience"
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -26,17 +27,19 @@ function App() {
   console.log(openModal)
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
-        <Navbar />
-        <Body>
-          <HeroSection />
-          <Wrapper>
-            <Skills />
-          </Wrapper>
-        </Body>
-      </Router>
-    </ThemeProvider>
-  );
+    <Router >
+      <Navbar />
+      <Body>
+        <HeroSection />
+        <Wrapper>
+          <Skills />
+          <Experience />
+        </Wrapper>
+       
+      </Body>
+    </Router>
+  </ThemeProvider>
+);
 }
 
 export default App;

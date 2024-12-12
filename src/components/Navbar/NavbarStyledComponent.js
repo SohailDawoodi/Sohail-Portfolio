@@ -13,7 +13,7 @@ export const Nav = styled.div`
     top: 0;
     z-index: 10;
     @media (max-width: 960px) {
-        trastion: 0.8s all ease;
+    trastion: 0.8s all ease;
     }
 `;
 export const NavbarContainer = styled.div`
@@ -23,6 +23,7 @@ export const NavbarContainer = styled.div`
   height: 60px;
   z-index: 1;
   width: 100%;
+  // inthis position is the padding of logo and tittle
   padding: 0 24px;
   max-width: 1200px;
 `;
@@ -52,10 +53,11 @@ export const NavItems = styled.ul`
     justify-content:center;
     gap: 32px;
     padding: 0 6px;
+     margin-left:20px;
     list-style: none;
-
     @media screen and (max-width: 768px) {
-      display: none;
+    display: none;
+   
     }
 `;
 

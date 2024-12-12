@@ -225,7 +225,7 @@ export const experiences = [
   id: 2,
   img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
   role: "Open Source Contributor ",
-  company: "GirlScript Summer of Code",
+  company: "Friendly and Github Advance project",
   date: "May 2022 - nov2022",
   desc: "Contributing to different open-source projects and learn from industry experts",
   skills: [

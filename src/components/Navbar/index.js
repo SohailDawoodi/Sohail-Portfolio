@@ -14,11 +14,14 @@ const Navbar = () => {
       <NavbarContainer>
         <NavLogo to='/'>
           <a style={{
+            display: "flex", alignItems: "center",
+            color: "#fff", marginBottom: '20;', cursor: 'pointer'
+          }}>
+            <DiCssdeck size="3rem" /> <Span style={{
             display: "flex", alignItems: "center", background: "linear-gradient(50deg, #07ad3e, #3980e3)",
             WebkitBackgroundClip: "text",
             color: "transparent", marginBottom: '20;', cursor: 'pointer'
-          }}>
-            <DiCssdeck size="3rem" /> <Span> SOHAIL Dawoodi</Span>
+          }}> SOHAIL Dawoodi</Span>
           </a>
         </NavLogo>
         <MobileIcon>

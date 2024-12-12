@@ -19,7 +19,7 @@ const Container = styled.div`
     align-items: center;
     padding: 40px 0px 80px 0px;
     @media (max-width: 960px) {
-        padding: 0px;
+    padding: 0px;
     }
 `;
 
@@ -34,19 +34,22 @@ const Wrapper = styled.div`
     padding: 80px 0;
     gap: 12px;
     @media (max-width: 960px) {
-        flex-direction: column;
+    flex-direction: column;
     }
 `;
 
 const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    color: transparent;
+    background: linear-gradient(50deg, #07ad3e, #3980e3); 
+    -webkit-background-clip: text;
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 32px;
   }
 `;
 
