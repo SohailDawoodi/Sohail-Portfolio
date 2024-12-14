@@ -32,7 +32,6 @@ max-width: 100%;
 -webkit-box-orient: vertical;
 text-overflow: ellipsis;
 `
-
 const Card = styled.div`
     width: 650px;
     border-radius: 10px;
