@@ -57,8 +57,11 @@ export const Desc = styled.div`
 export const ToggleButtonGroup = styled.div`
     display: flex;
     border: 1.5px solid ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.primary};
-    font-size: 16px;
+      color: transparent;
+    background: linear-gradient(70deg,rgb(162, 18, 187), #854CE6,#fff ); 
+    -webkit-background-clip: text;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
     border-radius: 12px;
     font-weight: 500;
     margin: 22px 0px;
@@ -73,11 +76,11 @@ export const ToggleButton = styled.div`
     cursor: pointer;
     ${({ active, theme }) =>
         active && `
-    background: ${theme.primary + 20};
+    background: ${theme.primary + 50};
     `
     }
     &:hover {
-        background: ${({ theme }) => theme.primary + 8};
+        background: ${({ theme }) => theme.primary + 20};
     }
     @media (max-width: 768px) {
         padding: 6px 8px;

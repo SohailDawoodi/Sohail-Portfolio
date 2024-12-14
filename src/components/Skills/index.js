@@ -123,6 +123,12 @@ const SkillItem = styled.div`
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  // mix-blend-mode:color-burn;
+color:red;
+  // background color: transparent;
+  // filter: brightness(0);
 `
 
 

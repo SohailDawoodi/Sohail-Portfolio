@@ -16,6 +16,8 @@ export const Nav = styled.div`
     trastion: 0.8s all ease;
     }
 `;
+
+
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -51,7 +53,7 @@ export const NavItems = styled.ul`
     display: flex;
     align-items: center;
     justify-content:center;
-    gap: 32px;
+    gap: 22px;
     padding: 0 6px;
      margin-left:20px;
     list-style: none;
@@ -113,7 +115,8 @@ export const GitHubButton = styled.a`
       border :none;    
     }
     @media screen and (max-width: 768px) { 
-    font-size: 14px;
+    font-size: 8px;
+    padding: 0 10px;
     }
 `;
 

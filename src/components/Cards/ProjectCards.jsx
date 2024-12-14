@@ -20,9 +20,10 @@ const Card = styled.div`
     height: 490px;
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
+    border-radius: 20px;
+    box-shadow: 0 0 12px 4pxrgb(162, 18, 187);
     overflow: hidden;
+    border:1px solid rgb(162, 18, 187);
     padding: 26px 20px;
     display: flex;
     flex-direction: column;
@@ -30,8 +31,10 @@ const Card = styled.div`
     transition: all 0.5s ease-in-out;
     &:hover {
         transform: translateY(-10px);
+        transition:0.5s;
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
+        border:none;
     }
     &:hover ${Button} {
         display: block;
@@ -59,7 +62,7 @@ const Tag = styled.span`
     font-size: 12px;
     font-weight: 400;
     color: ${({ theme }) => theme.primary};
-    background-color: ${({ theme }) => theme.primary + 15};
+    background-color: ${({ theme }) => theme.primary + 35};
     padding: 2px 8px;
     border-radius: 10px;
 `
@@ -122,13 +125,13 @@ const Avatar = styled.img`
     border: 3px solid ${({ theme }) => theme.card};
 `
 
-const ProjectCards = ({project,setOpenModal}) => {
+const ProjectCards = ({ project, setOpenModal }) => {
     return (
-        <Card onClick={() => setOpenModal({state: true, project: project})}>
-            <Image src={project.image}/>
+        <Card onClick={() => setOpenModal({ state: true, project: project })}>
+            <Image src={project.image} />
             <Tags>
                 {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
+                    <Tag>{tag}</Tag>
                 ))}
             </Tags>
             <Details>
@@ -138,7 +141,7 @@ const ProjectCards = ({project,setOpenModal}) => {
             </Details>
             <Members>
                 {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
+                    <Avatar src={member.img} />
                 ))}
             </Members>
             {/* <Button>View Project</Button> */}
