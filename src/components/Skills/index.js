@@ -102,14 +102,17 @@ const SkillList = styled.div`
 const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
+  color: ${({ theme }) => theme.text_primary + 90};
   border: 1px solid ${({ theme }) => theme.text_primary + 80};
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  :hover {
+  background:#5c5b5b
+  }
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 12px;
@@ -121,11 +124,11 @@ const SkillItem = styled.div`
 `
 
 const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
-  aspect-ratio: 3/2;
+  width:34px;
+  height:34px;
+  // aspect-ratio: 3/2;
   object-fit: contain;
-  // mix-blend-mode:color-burn;
+  mix-blend-mode:darker;
 color:red;
   // background color: transparent;
   // filter: brightness(0);
