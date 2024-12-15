@@ -9,7 +9,7 @@ export const Bio = {
     "Monitor",
   ],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "I am an energetic and creative individual, always eager to learn and embrace new challenges. With a passion for continuous improvement and delivering high-quality projects, my goal is to achieve outstanding and impactful results. With a positive approach and a growth mindset, I am ready to add value to various projects and teams.",
   github: "https://github.com/SohailDawoodi",
   resume:
     "https://drive.google.com/file/d/1fbbcxF13d76V7qFzi-u0ZbYDHd9eqlff/view?usp=drive_link",
