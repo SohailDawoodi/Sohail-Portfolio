@@ -80,11 +80,13 @@ export const NavLink = styled.a`
     &::after {
         content: ''; 
         position: absolute;
-        bottom: -4px;
+        bottom: -8px;
         left: 0;
         width: 0;
         height: 3px; 
-        background: linear-gradient(90deg,  #ff6a00,#ffce00); 
+        // background: linear-gradient(90deg,  #ff6a00,#ffce00); 
+        background: linear-gradient(170deg, #07ad3e, #3980e3); 
+
         transition: width 0.3s ease-in-out; 
     }
 
@@ -115,8 +117,9 @@ export const GitHubButton = styled.a`
       border :none;    
     }
     @media screen and (max-width: 768px) { 
-    font-size: 8px;
-    padding: 0 10px;
+    font-size: 14px;
+    padding: 0 16px;
+    border :none;
     }
 `;
 
@@ -208,7 +211,6 @@ export const MobileMenuButton = styled.a`
   text-decoration: none;
   font-size: 16px;
   transition: all 0.6s ease-in-out;
-
   :hover {
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.white};
@@ -216,19 +218,36 @@ export const MobileMenuButton = styled.a`
 `;
 
 export const MobileLink = styled.a`
-  color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  :hover {
-    color: ${({ theme }) => theme.primary};
-  }
+position: relative; 
+    font-weight: 750;
+    cursor: pointer;
+    text-decoration: none;
+    color: transparent;
+    background: linear-gradient(170deg, #07ad3e, #3980e3); 
+    -webkit-background-clip: text;
+    transition: all 0.3s ease-in-out;
 
-  &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
-  }
-`;
+    :hover::after {
+        width: 100%; 
+    }
+
+    &::after {
+        content: ''; 
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 3px; 
+        // background: linear-gradient(90deg,  #ff6a00,#ffce00); 
+        background: linear-gradient(170deg, #07ad3e, #3980e3); 
+
+        transition: width 0.3s ease-in-out; 
+    }
+
+    &.active::after {
+        width: 100%; 
+    }`
+  ;
 
 export const MobileNavLogo = styled(LinkR)`
   width: 80%;
