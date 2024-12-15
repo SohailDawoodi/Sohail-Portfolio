@@ -127,6 +127,27 @@ const ContactButton = styled.input`
   }
 `
 
+const Contact = () => {
+  const [open, setOpen] = React.useState(false);
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm('service_0jci0kr', 'template_1mrjbrn', form.current, 'fn0F9NkcClMUEfmvZ')
+      .then(
+        (result) => {
+          setOpen(true); 
+          form.current.reset();
+        },
+        (error) => {
+          console.error(error.text);
+          setOpen(true); 
+        }
+      );
+  };
+};
+
 
 
 export default Contact;
