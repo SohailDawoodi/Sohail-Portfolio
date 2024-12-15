@@ -146,6 +146,28 @@ const Contact = () => {
         }
       );
   };
+  return (
+    <Container id="contact">
+      <Wrapper>
+        <Title>Get in Touch</Title>
+        <Desc>If you have any questions, don't hesitate to send me a message!</Desc>
+        <ContactForm ref={form} onSubmit={handleSubmit}>
+          <ContactTitle>Send Me an Email 🚀</ContactTitle>
+          <ContactInput placeholder="Your Email" name="from_email" required />
+          <ContactInput placeholder="Your Name" name="from_name" required />
+          <ContactInput placeholder="Subject" name="subject" required />
+          <ContactInputMessage placeholder="Your Message" rows="4" name="message" required />
+          <ContactButton type="submit" value="Send Me" />
+        </ContactForm>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={() => setOpen(false)}
+          message="Your email was sent successfully!"
+        />
+      </Wrapper>
+    </Container>
+  );
 };
 
 
