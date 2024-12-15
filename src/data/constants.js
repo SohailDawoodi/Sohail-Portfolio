@@ -84,7 +84,7 @@ export const skills = [
       {
         name: "PHP",
         image:
-          "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/4085715/cover_image/regular_1708x683/0925-3D_Data_Visualization_with_Open_Source_Tools_A_Tutorial_Using_VTK_Dan_Newsletter-8de886e8cfe7817dd6f2502c43aacdce.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGIEDmHwvNss_HhFin5ErHSOf0-sgLLAV3A&s",
       },
       {
         name: "Laravel",
@@ -111,34 +111,34 @@ export const skills = [
     title: "language Proficiency",
     skills: [
       {
-        name: "Persian -- Native",
+        name: "Persian ✔️ Native",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwjd5dTECMYqvdh80qUXiQ9fu4lmo3l5phw&s"
       },
       {
-        name: "English --",
+        name: "English ✔️ Fluent",
         image:
-          "https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg",
+          "https://t3.ftcdn.net/jpg/08/01/13/42/360_F_801134208_CbFVFaDGUUATw7KdiukCsV7lP1VBCBGc.jpg"
       },
       {
-        name: "Spring boot",
+        name: "Turkish ✔️ Intermediate ",
         image:
-          "https://media.dev.to/cdn-cgi/image/width=1280,height=720,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fv48lgy98cborklb0i9lv.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAFk7eCntuVUZHynxWk8iPA0GZsKQM4ushFBMRnDZVOq-tn4r1lVLygtoO9iGwiVlZRA&usqp=CAU"
       },
       {
-        name: "XML",
+        name: "Pashto ✔️ Intermediate",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwjd5dTECMYqvdh80qUXiQ9fu4lmo3l5phw&s"
       },
       {
-        name: "C",
+        name: "Arabic ✔️ Intermediat",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8UbC6GBaHDi4H27OGbc9EgcS2ERPACoIYsbFYK3tR8KeTX6UMy0zhX-dPpYfrMt1lB0U&usqp=CAU",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/800px-Flag_of_Saudi_Arabia.svg.png",
       },
       {
-        name: "Excel",
+        name: "German ✔️ Intermediate",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtBkpl7BToeAON_dz_4q5zjX5KYmyZckciQrL9x6jL52a2I7rY-kqUCMmRZYspJtKiOt0&usqp=CAU",
+          "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png",
       },
     ],
   },
@@ -161,9 +161,19 @@ export const skills = [
           "https://media.dev.to/cdn-cgi/image/width=1280,height=720,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fv48lgy98cborklb0i9lv.png",
       },
       {
-        name: "XML",
+        name: "Agile",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
+          "https://www.wimi-teamwork.com/static/medias/magile.png",
+      },
+      {
+        name: "Graphic Design",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREJyqTDZF5Rl2xPbXKhxeVIeOtdENL4j2iyg&s",
+      },
+      {
+        name: "ُScientific Writing",
+        image:
+          "https://5.imimg.com/data5/HQ/YY/MY-64338908/scientific-writing-500x500.jpg",
       },
       {
         name: "C",
@@ -183,7 +193,7 @@ export const skills = [
       {
         name: "Python",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-mqjNc6Q526fh1H-A7vFY1UTD8mjd-SRy8A&s0",
+          "https://miro.medium.com/v2/resize:fit:1024/1*CvcM2chQox1VGJnWQO3acg.png",
       },
       {
         name: "VS Code",
