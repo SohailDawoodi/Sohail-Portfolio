@@ -4,17 +4,19 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-width: 100%;
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-background-color: #000000a7;
-display: flex;
-align-items: top;
-justify-content: center;
-overflow-y: scroll;
-transition: all 0.5s ease;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000a7;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+    padding-top: 40px;
+    z-index: 1300;
 `;
 
 const Wrapper = styled.div`

@@ -419,12 +419,12 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/SohailDawoodi/Fiveth-Project-by-the-name-of-snack.git",
-    webapp: " https://sohaildawoodi.github.io/Fiveth-Project-by-the-name-of-snack/",
+    webapp: " https://drive.google.com/file/d/1FPL0bNYIHNoSf_UpKuddejjhzsaMlF4A/view?usp=drive_link",
   },
   {
     id: 2,
     title: "Airline Ticket Reservation System",
-    date: "May 2024 - Jul 2024",
+    date: "May 2025 - Jul 2025",
     description:
       "A desktop-based airline ticket reservation system developed using Java, JavaFX, and SQL. The application allows users to search flights, reserve seats, and manage passenger information. Features include an interactive GUI, database connectivity via JDBC, and data persistence to ensure a smooth booking experience.",
     image:
@@ -444,12 +444,12 @@ export const projects = [
     ],
     category: "desktop app",
     github: "https://github.com/SohailDawoodi/Sohail-Portfolio.git",
-    webapp: "https://drive.google.com/file/d/1FPL0bNYIHNoSf_UpKuddejjhzsaMlF4A/view?usp=sharing", 
+    webapp: "https://drive.google.com/file/d/1ykb8YIt5lnqXjIfRnGeKhLj26EwPRi9n/view?usp=drive_link", 
 },
 {
-    id: 1,
+    id: 3,
     title: "Hotel Management System",
-    date: "Feb 2024 - Apr 2024",
+    date: "Feb 2025 - Apr 2025",
     description:
       "This Hotel Management System is a web application built using PHP, MySQL, HTML, CSS, and JavaScript. Users can book rooms online, manage customer information, and handle check-in/check-out processes. The system emphasizes responsive design, secure database integration, and user-friendly interface for seamless hotel operations.",
     image:
@@ -476,7 +476,7 @@ export const projects = [
     webapp: "https://drive.google.com/file/d/1FPL0bNYIHNoSf_UpKuddejjhzsaMlF4A/view?usp=drive_link", 
 },
   {
-    id: 3,
+    id: 4,
     title: "Degital Clock",
     date: "Oct 8 2024 - Oct 12 2024",
     description:
@@ -494,7 +494,7 @@ export const projects = [
     webapp: " https://sohaildawoodi.github.io/Fiveth-Project-by-the-name-of-snack/",
   },
   {
-    id: 21,
+    id: 5,
     title: "ReactPortfolio",
     date: "Dec 15 2024 - Dec 25 2024",
     description: "ReactPortfolio is a personal portfolio website built with React. It features a modern, responsive design with sections for showcasing projects, skills, and contact information. The website includes dynamic routing and reusable components for scalability.",
@@ -505,7 +505,7 @@ export const projects = [
     webapp: "https://sohaildawoodi.github.io/Student-Web-App/",
   },
   {
-    id: 1,
+    id: 6,
     title: "DentalClinicWebsite",
     date: "Jan 5 2024 - Feb 15 2024",
     description: "DentalClinicWebsite is a comprehensive website designed for a dental clinic. It features a modern and user-friendly interface, responsive design, and multiple sections, including services, about us, gallery, and contact. The website also includes a dynamic appointment booking system and reusable components to ensure scalability and maintainability.",
@@ -516,7 +516,7 @@ export const projects = [
     webapp: "https://sohaildawoodi.github.io/Student-Web-App/",
   },
   {
-    id: 20,
+    id: 7,
     title: "StudentManager With Framework",
     date: "Nov 18 2024 - Dec 3 2024",
     description: "StudentManager is a web app for managing student records. It includes full CRUD functionality: Create, Read, Update, and Delete student data. Users can input and validate data, and changes are dynamically reflected in the table. Data persistence is implemented using Local Storage.",
@@ -527,7 +527,7 @@ export const projects = [
     webapp: "https://sohaildawoodi.github.io/Student-Web-App/",
   },
   {
-    id: 20,
+    id: 8,
     title: "StudentManager",
     date: "Nov 26 2023 - Jan 1 2024",
     description: "StudentManager is a web app for managing student records. It includes full CRUD functionality: Create, Read, Update, and Delete student data. Users can input and validate data, and changes are dynamically reflected in the table. Data persistence is implemented using Local Storage.",
@@ -539,7 +539,7 @@ export const projects = [
   },
   
   {
-    id: 19,
+    id: 9,
     title: "BirthdayGreeter",
     date: "Dec 21 2023 - Dec 25 2023",
     description: "BirthdayGreeter is a fun and interactive project where users can input their name and date of birth to receive a personalized birthday greeting. It includes animated balloons and confetti effects, adding a festive touch to the design.",
@@ -563,7 +563,7 @@ export const projects = [
   {
     id: 11,
     title: "FitTrack",
-    date: "Aug 1 2023 - Aug 15 2023",
+    date: "Aug 1 2024 - Aug 10 2024",
     description: "FitTrack helps users monitor their fitness journey. It includes daily activity logs, calorie tracking, and a workout scheduler. The app uses dynamic charts to display progress and has a clean, intuitive interface.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX0Y_IBtRIS8imQV58xD7aDCkWrDRLfWT3rw&s",
     tags: ["UI Design", "UX Design", "User Experience", "Prototyping", "Figma",],
@@ -572,9 +572,9 @@ export const projects = [
     webapp: "https://sohaildawoodi.github.io/Student-Web-App/",
   },
   {
-    id: 5,
+    id: 12,
     title: "Todo Web App",
-    date: "Jun 2021",
+    date: "Jun 2024",
     description:
       " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
     image:
@@ -587,7 +587,7 @@ export const projects = [
   {
     id: 14,
     title: "WeatherPro",
-    date: "Nov 1 2023 - Nov 10 2023",
+    date: "Nov 1 2024 - Nov 10 2024",
     description: "WeatherPro provides users with real-time weather updates and forecasts. The app integrates with a weather API and includes a clean, interactive UI for desktop and mobile users.",
     image: "https://mir-s3-cdn-cf.behance.net/projects/404/9a541e207082643.Y3JvcCwxMzgwLDEwODAsMTAsMA.png",
     tags: ["Color theory", "UI Design", "UX Design", 'Human-Centered Design', "Wireframing", "Prototyping", "Figma",],
@@ -598,7 +598,7 @@ export const projects = [
   },
   
   {
-    id: 17,
+    id: 13,
     title: "LightControl",
     date: "Dec 12 2023 - Dec 15 2023",
     description: "LightControl is a web-based application that simulates turning a light bulb on and off using a simple button. It uses JavaScript for interactive functionality and CSS animations for smooth transitions. Ideal for beginners, this project demonstrates basic event handling in JavaScript.",
