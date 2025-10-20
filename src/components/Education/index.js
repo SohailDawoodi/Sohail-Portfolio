@@ -1,4 +1,4 @@
-// ...existing code...
+
 import React from 'react'
 import styled from 'styled-components'
 import Timeline from '@mui/lab/Timeline';
@@ -73,7 +73,7 @@ const TimelineSection = styled.div`
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* changed: align timeline and content to the left side of the container so cards appear on the left */
     justify-content: center;
     gap: 12px;
 `;
@@ -87,10 +87,9 @@ const index = () => {
                     My education has been a journey of self-discovery and growth. My educational details are as follows.
                 </Desc>
                 
+                {/* single timeline for all viewports — position="right" puts the line/dots on the right and cards on the left */}
                 <TimelineSection className="timeline-section">
-                    {/* position="right" باعث می‌شود کارت‌ها سمت چپ و دات/لاین سمت راست قرار بگیرند
-                        و در موبایل هم همان دیزاین حفظ شود (مشابه Experience) */}
-                    <Timeline position="right">
+                    <Timeline position="right" sx={{ width: '100%' }}>
                         {education.map((item, idx) => (
                             <TimelineItem key={idx}>
                                 <TimelineSeparator>
@@ -118,4 +117,4 @@ const index = () => {
     )
 }
 
-export default index;
+export default index
