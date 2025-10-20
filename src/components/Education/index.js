@@ -94,7 +94,7 @@ const Education = () => {
 
         <TimelineSection>
           {/* ✅ Timeline را اضافه کن */}
-          <Timeline>
+          <Timeline position='alternate'>
             {education.map((item, idx) => (
               <TimelineItem key={idx}>
                 <TimelineSeparator>
