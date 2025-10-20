@@ -1,4 +1,5 @@
-
+// filepath: f:\port\Sohail Portfolio\src\components\Education\index.js
+// ...existing code...
 import React from 'react'
 import styled from 'styled-components'
 import Timeline from '@mui/lab/Timeline';
@@ -17,9 +18,9 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 0px 0px 60px 0px;
+    padding: 40px 0px 80px 0px;
     @media (max-width: 960px) {
-        padding: 20px 0px;
+    padding: 0px;
     }
 `;
 
@@ -31,11 +32,10 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
     max-width: 1350px;
-    padding: 40px 0px 0px 0px;
+    padding: 80px 0;
     gap: 12px;
     @media (max-width: 960px) {
-        flex-direction: column;
-        padding: 20px 0px 0px 0px;
+    flex-direction: column;
     }
 `;
 
@@ -45,13 +45,13 @@ const Title = styled.div`
     font-weight: 600;
     margin-top: 20px;
     color: transparent;
-    background: linear-gradient(50deg, #07ad3e, #3980e3); 
+    background: linear-gradient(210deg, #07ad3e, #3980e3); 
     -webkit-background-clip: text;
     transition: all 0.3s ease-in-out;
     @media (max-width: 768px) {
-        margin-top: 12px;
-        font-size: 32px;
-    }
+    margin-top: 12px;
+    font-size: 32px;
+  }
 `;
 
 const Desc = styled.div`
@@ -59,11 +59,9 @@ const Desc = styled.div`
     text-align: center;
     max-width: 600px;
     color: lightgray;
-    padding: 0 20px;
     @media (max-width: 768px) {
         margin-top: 12px;
         font-size: 16px;
-        padding: 0 15px;
     }
 `;
 
@@ -73,12 +71,28 @@ const TimelineSection = styled.div`
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* changed: align timeline and content to the left side of the container so cards appear on the left */
+    align-items: center;
     justify-content: center;
     gap: 12px;
 `;
 
-const index = () => {
+// const StyledTimeline = styled(Timeline)`
+//     width: 100%;
+//     // margin: 0 auto; /* ensure centered inside TimelineSection */
+//     @media (max-width: 768px) {
+//         && {
+//             padding-left: 0;
+//             padding-right: 0;
+//         }
+//     }
+//     @media (max-width: 480px) {
+//         && {
+//             padding: 0;
+//         }
+//     }
+// `;
+
+const Education = () => {
     return (
         <Container id="education">
             <Wrapper>
@@ -86,22 +100,47 @@ const index = () => {
                 <Desc>
                     My education has been a journey of self-discovery and growth. My educational details are as follows.
                 </Desc>
-                
-                {/* single timeline for all viewports — position="right" puts the line/dots on the right and cards on the left */}
+
                 <TimelineSection className="timeline-section">
-                    <Timeline position="right" sx={{ width: '100%' }}>
+                   
                         {education.map((item, idx) => (
                             <TimelineItem key={idx}>
                                 <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary" />
-                                    {idx !== education.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                                    <TimelineDot 
+                                        variant="outlined" 
+                                        color="secondary" 
+                                        sx={{
+                                            width: 16,
+                                            height: 16,
+                                            '@media (max-width: 480px)': {
+                                                width: 12,
+                                                height: 12
+                                            }
+                                        }}
+                                    />
+                                    {idx !== education.length - 1 && (
+                                        <TimelineConnector 
+                                            sx={{ 
+                                                background: '#854CE6',
+                                                '@media (max-width: 480px)': {
+                                                    width: 2
+                                                }
+                                            }} 
+                                        />
+                                    )}
                                 </TimelineSeparator>
 
                                 <TimelineContent sx={{ 
-                                    py: '12px', 
+                                    py: '16px', 
                                     px: 2,
                                     width: '100%',
-                                    '@media (max-width: 660px)': {
+                                    display: 'flex',
+                                    justifyContent: 'center', /* center the card horizontally */
+                                    '@media (max-width: 768px)': {
+                                        py: '12px',
+                                        px: 1.5
+                                    },
+                                    '@media (max-width: 480px)': {
                                         py: '8px',
                                         px: 1
                                     }
@@ -110,11 +149,10 @@ const index = () => {
                                 </TimelineContent>
                             </TimelineItem>
                         ))}
-                    </Timeline>
                 </TimelineSection>
             </Wrapper>
         </Container>
     )
 }
 
-export default index
+export default Education;
