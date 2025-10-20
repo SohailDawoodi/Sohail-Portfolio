@@ -76,22 +76,6 @@ const TimelineSection = styled.div`
     align-items: center;
     justify-content: center;
     gap: 12px;
-
-    /* مخفی کردن نسخه دسکتاپ در موبایل (از 660px به پایین) */
-    @media (max-width: 660px) {
-        display: none;
-    }
-`;
-
-const MobileTimelineContainer = styled.div`
-    display: none;
-    @media (max-width: 660px) {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 0 15px;
-        gap: 20px;
-    }
 `;
 
 const index = () => {
@@ -103,12 +87,12 @@ const index = () => {
                     My education has been a journey of self-discovery and growth. My educational details are as follows.
                 </Desc>
                 
-                {/* نسخه دسکتاپ */}
-                <TimelineSection className="desktop-timeline">
-                    <Timeline>
+                <TimelineSection className="timeline-section">
+                    {/* position="right" باعث می‌شود کارت‌ها سمت چپ و دات/لاین سمت راست قرار بگیرند
+                        و در موبایل هم همان دیزاین حفظ شود (مشابه Experience) */}
+                    <Timeline position="right">
                         {education.map((item, idx) => (
                             <TimelineItem key={idx}>
-                                {/* Separator قبل از Content تا دات/لاین سمت درست باشه */}
                                 <TimelineSeparator>
                                     <TimelineDot variant="outlined" color="secondary" />
                                     {idx !== education.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
@@ -117,6 +101,7 @@ const index = () => {
                                 <TimelineContent sx={{ 
                                     py: '12px', 
                                     px: 2,
+                                    width: '100%',
                                     '@media (max-width: 660px)': {
                                         py: '8px',
                                         px: 1
@@ -128,16 +113,9 @@ const index = () => {
                         ))}
                     </Timeline>
                 </TimelineSection>
-
-                {/* نسخه موبایل - ساده‌تر */}
-                <MobileTimelineContainer className="mobile-timeline">
-                    {education.map((item, idx) => (
-                        <EducationCard key={idx} education={item} />
-                    ))}
-                </MobileTimelineContainer>
             </Wrapper>
         </Container>
     )
 }
 
-export default index
+export default index;
