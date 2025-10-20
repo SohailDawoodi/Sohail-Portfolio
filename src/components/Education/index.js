@@ -84,38 +84,35 @@ const TimelineSection = styled.div`
 `;
 
 const Education = () => {
-    return (
-        <Container id="education">
-            <Wrapper>
-                <Title>Education</Title>
-                <Desc>
-                    My education has been a journey of self-discovery and growth. My educational details are as follows.
-                </Desc>
+  return (
+    <Container id="education">
+      <Wrapper>
+        <Title>Education</Title>
+        <Desc>
+          My education has been a journey of self-discovery and growth. My educational details are as follows.
+        </Desc>
 
-                <TimelineSection>
-                    {/* Timeline wrapper اضافه کنید */}
-                    <Timeline>
-                        {education.map((item, idx) => (
-                            <TimelineItem key={idx}>
-                                <TimelineSeparator>
-                                    <TimelineDot 
-                                        variant="outlined" 
-                                        color="secondary" 
-                                    />
-                                    {idx !== education.length - 1 && (
-                                        <TimelineConnector style={{ background: '#854CE6' }} />
-                                    )}
-                                </TimelineSeparator>
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <EducationCard education={item}/>
-                                </TimelineContent>
-                            </TimelineItem>
-                        ))}
-                    </Timeline>
-                </TimelineSection>
-            </Wrapper>
-        </Container>
-    )
-}
+        <TimelineSection>
+          {/* ✅ Timeline را اضافه کن */}
+          <Timeline>
+            {education.map((item, idx) => (
+              <TimelineItem key={idx}>
+                <TimelineSeparator>
+                  <TimelineDot variant="outlined" color="secondary" />
+                  {idx !== education.length - 1 && (
+                    <TimelineConnector style={{ background: '#854CE6' }} />
+                  )}
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: '12px', px: 2 }}>
+                  <EducationCard education={item} />
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </TimelineSection>
+      </Wrapper>
+    </Container>
+  );
+};
 
 export default Education;

@@ -360,15 +360,15 @@ export const education = [
     degree: "Bachelor of Science - BSc, Software Engineering",
   },
 
-  {
-    id: 1,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQX8692GBPcvwSw9UU9-tHjInerarrjrwvAQ&s",
-    school: "WASA Institute",
-    date: "Jan 2024 - Dec 2024",
-    grade: "Certified",
-    desc: "I worked as a Web Developer at WASA Institute, where I developed and maintained responsive and user-friendly web applications. My responsibilities included creating interactive interfaces, optimizing performance, and collaborating with backend teams to integrate APIs. Additionally, I implemented best practices for UI/UX design and ensured the scalability of web solutions.",
-    degree: "Web Development",
-  },
+  // {
+  //   id: 1,
+  //   img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQX8692GBPcvwSw9UU9-tHjInerarrjrwvAQ&s",
+  //   school: "WASA Institute",
+  //   date: "Jan 2024 - Dec 2024",
+  //   grade: "Certified",
+  //   desc: "I worked as a Web Developer at WASA Institute, where I developed and maintained responsive and user-friendly web applications. My responsibilities included creating interactive interfaces, optimizing performance, and collaborating with backend teams to integrate APIs. Additionally, I implemented best practices for UI/UX design and ensured the scalability of web solutions.",
+  //   degree: "Web Development",
+  // },
   {
     id: 2,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIpBtWj0ujbLQog6nuhF2yinLN5Sq9rDbeHA&s",
