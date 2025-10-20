@@ -16,9 +16,9 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 0px 0px 60px 0px;
+    padding: 40px 0px 80px 0px;
     @media (max-width: 960px) {
-        padding: 20px 0px;
+    padding: 0px;
     }
 `;
 
@@ -30,11 +30,10 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
     max-width: 1350px;
-    padding: 40px 0px 0px 0px;
+    padding: 80px 0;
     gap: 12px;
     @media (max-width: 960px) {
-        flex-direction: column;
-        padding: 20px 0px 0px 0px;
+    flex-direction: column;
     }
 `;
 
@@ -44,13 +43,13 @@ const Title = styled.div`
     font-weight: 600;
     margin-top: 20px;
     color: transparent;
-    background: linear-gradient(50deg, #07ad3e, #3980e3); 
+    background: linear-gradient(210deg, #07ad3e, #3980e3); 
     -webkit-background-clip: text;
     transition: all 0.3s ease-in-out;
     @media (max-width: 768px) {
-        margin-top: 12px;
-        font-size: 32px;
-    }
+    margin-top: 12px;
+    font-size: 32px;
+  }
 `;
 
 const Desc = styled.div`
@@ -58,11 +57,9 @@ const Desc = styled.div`
     text-align: center;
     max-width: 600px;
     color: lightgray;
-    padding: 0 20px;
     @media (max-width: 768px) {
         margin-top: 12px;
         font-size: 16px;
-        padding: 0 15px;
     }
 `;
 
@@ -75,32 +72,8 @@ const TimelineSection = styled.div`
     align-items: center;
     justify-content: center;
     gap: 12px;
-
-    @media (max-width: 660px) {
-        align-items: center !important;
-        padding: 0 15px;
-        
-        .MuiTimelineItem-root {
-            width: 100%;
-            
-            .MuiTimelineContent-root {
-                width: 100% !important;
-                padding: 12px 0 !important;
-            }
-        }
-    }
 `;
 
-const MobileTimelineContainer = styled.div`
-    display: none;
-    @media (max-width: 660px) {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 0 15px;
-        gap: 20px;
-    }
-`;
 
 const index = () => {
     return (
@@ -134,13 +107,6 @@ const index = () => {
                         ))}
                     </Timeline>
                 </TimelineSection>
-
-                {/* نسخه موبایل - ساده‌تر */}
-                <MobileTimelineContainer className="mobile-timeline">
-                    {education.map((education, index) => (
-                        <EducationCard key={index} education={education} />
-                    ))}
-                </MobileTimelineContainer>
             </Wrapper>
         </Container>
     )
