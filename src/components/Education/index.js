@@ -75,29 +75,17 @@ const TimelineSection = styled.div`
     align-items: center;
     justify-content: center;
     gap: 12px;
-    
-    /* اصلاح استایل Timeline برای موبایل */
-    .MuiTimeline-root {
-        width: 100%;
-        padding: 0;
+
+    @media (max-width: 660px) {
+        align-items: center !important;
+        padding: 0 15px;
         
-        @media (max-width: 660px) {
-            padding: 0 10px;
+        .MuiTimelineItem-root {
+            width: 100%;
             
-            /* تنظیم Timeline برای موبایل */
-            .MuiTimelineItem-root {
-                flex-direction: column;
-                align-items: flex-start;
-                
-                .MuiTimelineSeparator-root {
-                    display: none; /* مخفی کردن خط اتصال در موبایل */
-                }
-                
-                .MuiTimelineContent-root {
-                    width: 100%;
-                    padding: 8px 0;
-                    flex: 1;
-                }
+            .MuiTimelineContent-root {
+                width: 100% !important;
+                padding: 12px 0 !important;
             }
         }
     }
