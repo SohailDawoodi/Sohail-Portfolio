@@ -2,7 +2,7 @@
 // ...existing code...
 import React from 'react'
 import styled from 'styled-components'
-import Timeline from '@mui/lab/Timeline';
+// import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
@@ -76,22 +76,6 @@ const TimelineSection = styled.div`
     gap: 12px;
 `;
 
-// const StyledTimeline = styled(Timeline)`
-//     width: 100%;
-//     // margin: 0 auto; /* ensure centered inside TimelineSection */
-//     @media (max-width: 768px) {
-//         && {
-//             padding-left: 0;
-//             padding-right: 0;
-//         }
-//     }
-//     @media (max-width: 480px) {
-//         && {
-//             padding: 0;
-//         }
-//     }
-// `;
-
 const Education = () => {
     return (
         <Container id="education">
@@ -135,7 +119,7 @@ const Education = () => {
                                     px: 2,
                                     width: '100%',
                                     display: 'flex',
-                                    justifyContent: 'center', /* center the card horizontally */
+                                    justifyContent: 'center', 
                                     '@media (max-width: 768px)': {
                                         py: '12px',
                                         px: 1.5
