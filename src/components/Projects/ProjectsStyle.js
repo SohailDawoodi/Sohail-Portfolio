@@ -47,7 +47,7 @@ export const Desc = styled.div`
     text-align:justify;
     text-align: center;
     max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
+    color:lightgray;
     @media (max-width: 768px) {
         margin-top: 12px;
         font-size: 16px;
@@ -56,9 +56,9 @@ export const Desc = styled.div`
 
 export const ToggleButtonGroup = styled.div`
     display: flex;
-    border: 1.5px solid ${({ theme }) => theme.primary};
-      color: transparent;
-    background: linear-gradient(70deg,rgb(162, 18, 187), #854CE6,#fff ); 
+    border: 1.5px solid rgb(0, 106, 255);
+    color: transparent;
+    background: linear-gradient(15deg,#07ad3e,#fff ); 
     -webkit-background-clip: text;
     transition: all 0.3s ease-in-out;
     font-size: 20px;
@@ -74,13 +74,12 @@ export const ToggleButton = styled.div`
     padding: 8px 18px;
     border-radius: 6px;
     cursor: pointer;
-    ${({ active, theme }) =>
-        active && `
-    background: ${theme.primary + 50};
-    `
+    &:active {
+    color: #fff !important;
+    transition: all 0.3s ease-in-out;
     }
     &:hover {
-        background: ${({ theme }) => theme.primary + 20};
+        color: #3980e3;
     }
     @media (max-width: 768px) {
         padding: 6px 8px;
@@ -89,7 +88,7 @@ export const ToggleButton = styled.div`
 `
 export const Divider = styled.div`
     width: 1.5px;
-    background: ${({ theme }) => theme.primary};
+    background:rgb(0, 106, 255);
 `
 
 

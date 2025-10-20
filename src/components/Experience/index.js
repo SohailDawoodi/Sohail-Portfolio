@@ -44,7 +44,7 @@ const Title = styled.div`
     font-weight: 600;
     margin-top: 20px;
     color: transparent;
-    background: linear-gradient(50deg, #07ad3e, #3980e3); 
+    background: linear-gradient(210deg, #07ad3e, #3980e3); 
     -webkit-background-clip: text;
     transition: all 0.3s ease-in-out;
     @media (max-width: 768px) {
@@ -57,7 +57,7 @@ const Desc = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
+    color: lightgray;
     @media (max-width: 768px) {
         margin-top: 12px;
         font-size: 16px;

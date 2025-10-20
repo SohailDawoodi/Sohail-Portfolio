@@ -4,66 +4,65 @@ import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
-import { useTheme } from 'styled-components';
+// import { useTheme } from 'styled-components';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
-  return (
-    <Nav>
-      <NavbarContainer>
-        <NavLogo to='/'>
-          <a style={{
-            display: "flex", alignItems: "center",
-            color: "#fff", marginBottom: '20;', cursor: 'pointer'
-          }}>
-            <DiCssdeck size="3rem" /> <Span style={{
-            display: "flex", alignItems: "center", background: "linear-gradient(50deg, #07ad3e, #3980e3)",
-            WebkitBackgroundClip: "text",
-            color: "transparent", marginBottom: '20;', cursor: 'pointer'
-          }}> SOHAIL Dawoodi</Span>
-          </a>
-        </NavLogo>
-        <MobileIcon>
-          <FaBars onClick={() => {
-            setIsOpen(!isOpen)
-          }} />
-        </MobileIcon>
-        <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href='#skills'>Skills</NavLink>
-          <NavLink href='#experience'>Experience</NavLink>
-          <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#education'>Education</NavLink>
-          <NavLink href='#contact'>Contact</NavLink>
-        </NavItems>
-        <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
-        </ButtonContainer>
-        {
-          isOpen &&
-          <MobileMenu isOpen={isOpen}>
-            <MobileLink href="#about" onClick={() => {
-              setIsOpen(!isOpen)
-            }}>About</MobileLink>
-            <MobileLink href='#skills' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Skills</MobileLink>
-            <MobileLink href='#experience' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Experience</MobileLink>
-            <MobileLink href='#projects' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Projects</MobileLink>
-            <MobileLink href='#education' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Education</MobileLink>
-            <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">Github Profile</GitHubButton>
-          </MobileMenu>
-        }
-      </NavbarContainer>
-    </Nav>
-  )
-}
 
-export default Navbar
+  return (
+      <Nav>
+          <NavbarContainer>
+              <NavLogo to='/'>
+                  <div style={{
+                      display: "flex", 
+                      alignItems: "center",
+                      color: "#fff", 
+                      marginBottom: '20px', 
+                      cursor: 'pointer'
+                  }}>
+                      <DiCssdeck size="3rem" /> 
+                      <Span>SOHAIL Dawoodi</Span>
+                  </div>
+              </NavLogo>
+              <MobileIcon>
+                  <FaBars onClick={() => setIsOpen(!isOpen)} />
+              </MobileIcon>
+              <NavItems>
+                  <NavLink href="#about">About</NavLink>
+                  <NavLink href="#skills">Skills</NavLink>
+                  <NavLink href="#experience">Experience</NavLink>
+                  <NavLink href="#projects">Projects</NavLink>
+                  <NavLink href="#education">Education</NavLink>
+                  <NavLink href="#contact">Contact</NavLink>
+              </NavItems>
+              <ButtonContainer>
+                  <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+              </ButtonContainer>
+              {isOpen && (
+                  <MobileMenu isOpen={isOpen}>
+                      <MobileLink href="#about" onClick={() => setIsOpen(false)}>About</MobileLink>
+                      <MobileLink href="#skills" onClick={() => setIsOpen(false)}>Skills</MobileLink>
+                      <MobileLink href="#experience" onClick={() => setIsOpen(false)}>Experience</MobileLink>
+                      <MobileLink href="#projects" onClick={() => setIsOpen(false)}>Projects</MobileLink>
+                      <MobileLink href="#education" onClick={() => setIsOpen(false)}>Education</MobileLink>
+                      <MobileLink href="#contact" onClick={() => setIsOpen(false)}>Contact</MobileLink>
+                      <GitHubButton 
+                          style={{ 
+                              padding: '10px 16px', 
+                              background: '#07ad3e', 
+                              color: 'white', 
+                              width: 'max-content' 
+                          }} 
+                          href={Bio.github} 
+                          target="_blank"
+                      >
+                          Github Profile
+                      </GitHubButton>
+                  </MobileMenu>
+              )}
+          </NavbarContainer>
+      </Nav>
+  );
+};
+
+export default Navbar;

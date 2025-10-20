@@ -32,19 +32,21 @@ body{
 
 /* Handle of the scrollbar */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #cc00ff, #51095e);
+  background: linear-gradient(50deg, #07ad3e, #3980e3); 
+  box-shadow: 0 0 12px lightgray; 
   border-radius: 10px; 
-  box-shadow: 0 0 8px rgba(255, 100, 0, 0.5); 
   transition: background 0.3s ease, box-shadow 0.3s ease; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(50deg, #07ad3e, #3980e3); 
-  box-shadow: 0 0 12px rgba(106, 13, 139, 0.7); 
+  background: linear-gradient(50deg, #ffffff, #3980e3); 
 }
 
 
 ::-webkit-scrollbar-corner {
-  background:  rgba(106, 13, 139, 0.7); 
+  background:  rgba(106, 13, 139, 0.7) #07ad3e;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }

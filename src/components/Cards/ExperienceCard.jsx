@@ -17,7 +17,7 @@ const Description = styled.div`
     width: 100%;
     font-size: 15px;
     font-weight: 400;
-    color: ${({ theme }) => theme.text_primary + 99};
+    color: lightgray;
     margin-bottom: 10px;
     @media only screen and (max-width: 768px){
         font-size: 12px;
@@ -37,7 +37,7 @@ text-overflow: ellipsis;
 const Card = styled.div`
     width: 650px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 16px rgba(57, 127, 226, 0.45));
     padding: 12px 16px;
     justify-content: space-between;
     position: relative;
@@ -45,11 +45,12 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 0.5px solid #3980e3;
     &:hover{
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-        transform: translateY(-5px);
-        border: 0.1px solid  #be1adb;
+        box-shadow: 0px 0px 20px rgba(7, 173, 62, 0.3);
+        transform: translateY(-10px);
+        // border: 0.1px solid  lightgray;
     }
     @media only screen and (max-width: 768px){
         padding: 10px;
@@ -67,8 +68,7 @@ const Card = styled.div`
 
     }
 
-    border: 0.1px solid #306EE8;
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    // box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `
 
 const Top = styled.div`
@@ -96,10 +96,11 @@ const Body = styled.div`
 
 
 const Role = styled.div`
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: transparent;
-    background: linear-gradient(70deg, #be1adb, #854CE6,#fff ); 
+    background: linear-gradient(90deg, #3980e3,#07ad3e);
+    background-clip: text;
     -webkit-background-clip: text;
     transition: all 0.3s ease-in-out;
     @media only screen and (max-width: 768px){
@@ -110,7 +111,7 @@ const Role = styled.div`
 const Company = styled.div`
     font-size: 14px;
     font-weight: 500;
-    color: ${({ theme }) => theme.text_secondary + 99};
+    color:lightgray;
     @media only screen and (max-width: 768px){
         font-size: 12px;
     }
@@ -119,7 +120,7 @@ const Company = styled.div`
 const Date = styled.div`
     font-size: 12px;
     font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 80};
+    color: gray;
     @media only screen and (max-width: 768px){
         font-size: 10px;
     }
@@ -142,7 +143,7 @@ const ItemWrapper = styled.div`
 const Skill = styled.div`
     font-size: 15px;
     font-weight: 400;
-    color: ${({ theme }) => theme.text_primary + 99};
+    color: gray;
     @media only screen and (max-width: 768px){
         font-size: 12px;
     }

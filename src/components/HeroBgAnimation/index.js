@@ -140,7 +140,7 @@ const HeroBgAnimation = () => (
         fill="#F46737"
       >
         <animateMotion
-          dur="5s"
+          dur="10s"
           begin="0"
           repeatCount="indefinite"
           rotate="auto"
