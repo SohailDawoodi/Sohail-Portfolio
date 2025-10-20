@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import Timeline from '@mui/lab/Timeline';
@@ -19,7 +18,7 @@ const Container = styled.div`
     align-items: center;
     padding: 0px 0px 60px 0px;
     @media (max-width: 960px) {
-        padding: 0px;
+        padding: 20px 0px;
     }
 `;
 
@@ -35,22 +34,23 @@ const Wrapper = styled.div`
     gap: 12px;
     @media (max-width: 960px) {
         flex-direction: column;
+        padding: 20px 0px 0px 0px;
     }
 `;
 
 const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-color: transparent;
-background: linear-gradient(50deg, #07ad3e, #3980e3); 
--webkit-background-clip: text;
-transition: all 0.3s ease-in-out;
-  @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
-  }
+    font-size: 42px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    color: transparent;
+    background: linear-gradient(50deg, #07ad3e, #3980e3); 
+    -webkit-background-clip: text;
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 768px) {
+        margin-top: 12px;
+        font-size: 32px;
+    }
 `;
 
 const Desc = styled.div`
@@ -58,9 +58,11 @@ const Desc = styled.div`
     text-align: center;
     max-width: 600px;
     color: lightgray;
+    padding: 0 20px;
     @media (max-width: 768px) {
         margin-top: 12px;
         font-size: 16px;
+        padding: 0 15px;
     }
 `;
 
@@ -73,12 +75,44 @@ const TimelineSection = styled.div`
     align-items: center;
     justify-content: center;
     gap: 12px;
-    @media (max-width: 660px) {
-        align-items: end;
+    
+    /* اصلاح استایل Timeline برای موبایل */
+    .MuiTimeline-root {
+        width: 100%;
+        padding: 0;
+        
+        @media (max-width: 660px) {
+            padding: 0 10px;
+            
+            /* تنظیم Timeline برای موبایل */
+            .MuiTimelineItem-root {
+                flex-direction: column;
+                align-items: flex-start;
+                
+                .MuiTimelineSeparator-root {
+                    display: none; /* مخفی کردن خط اتصال در موبایل */
+                }
+                
+                .MuiTimelineContent-root {
+                    width: 100%;
+                    padding: 8px 0;
+                    flex: 1;
+                }
+            }
+        }
     }
 `;
 
-
+const MobileTimelineContainer = styled.div`
+    display: none;
+    @media (max-width: 660px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 15px;
+        gap: 20px;
+    }
+`;
 
 const index = () => {
     return (
@@ -88,22 +122,37 @@ const index = () => {
                 <Desc>
                     My education has been a journey of self-discovery and growth. My educational details are as follows.
                 </Desc>
-                <TimelineSection>
+                
+                {/* نسخه دسکتاپ */}
+                <TimelineSection className="desktop-timeline">
                     <Timeline>
-                        {education.map((education,index) => (
-                            <TimelineItem >
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
+                        {education.map((education, index) => (
+                            <TimelineItem key={index}>
+                                <TimelineContent sx={{ 
+                                    py: '12px', 
+                                    px: 2,
+                                    '@media (max-width: 660px)': {
+                                        py: '8px',
+                                        px: 1
+                                    }
+                                }}>
                                     <EducationCard education={education}/>
                                 </TimelineContent>
                                 <TimelineSeparator>
                                     <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length  && <TimelineConnector style={{ background: '#854CE6' }} />}
+                                    {index !== education.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
                                 </TimelineSeparator>
                             </TimelineItem>
                         ))}
                     </Timeline>
-
                 </TimelineSection>
+
+                {/* نسخه موبایل - ساده‌تر */}
+                <MobileTimelineContainer className="mobile-timeline">
+                    {education.map((education, index) => (
+                        <EducationCard key={index} education={education} />
+                    ))}
+                </MobileTimelineContainer>
             </Wrapper>
         </Container>
     )
