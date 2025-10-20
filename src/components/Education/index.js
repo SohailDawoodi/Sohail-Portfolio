@@ -1,8 +1,6 @@
-// filepath: f:\port\Sohail Portfolio\src\components\Education\index.js
-// ...existing code...
 import React from 'react'
 import styled from 'styled-components'
-// import Timeline from '@mui/lab/Timeline';
+import Timeline from '@mui/lab/Timeline'; // این خط را آنکامنت کنید
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
@@ -74,6 +72,15 @@ const TimelineSection = styled.div`
     align-items: center;
     justify-content: center;
     gap: 12px;
+    @media (max-width: 768px) {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 0 15px;
+        gap: 8px;
+    }
 `;
 
 const Education = () => {
@@ -85,54 +92,26 @@ const Education = () => {
                     My education has been a journey of self-discovery and growth. My educational details are as follows.
                 </Desc>
 
-                <TimelineSection className="timeline-section">
-                   
+                <TimelineSection>
+                    {/* Timeline wrapper اضافه کنید */}
+                    <Timeline>
                         {education.map((item, idx) => (
                             <TimelineItem key={idx}>
                                 <TimelineSeparator>
                                     <TimelineDot 
                                         variant="outlined" 
                                         color="secondary" 
-                                        sx={{
-                                            width: 16,
-                                            height: 16,
-                                            '@media (max-width: 480px)': {
-                                                width: 12,
-                                                height: 12
-                                            }
-                                        }}
                                     />
                                     {idx !== education.length - 1 && (
-                                        <TimelineConnector 
-                                            sx={{ 
-                                                background: '#854CE6',
-                                                '@media (max-width: 480px)': {
-                                                    width: 2
-                                                }
-                                            }} 
-                                        />
+                                        <TimelineConnector style={{ background: '#854CE6' }} />
                                     )}
                                 </TimelineSeparator>
-
-                                <TimelineContent sx={{ 
-                                    py: '16px', 
-                                    px: 2,
-                                    width: '100%',
-                                    display: 'flex',
-                                    justifyContent: 'center', 
-                                    '@media (max-width: 768px)': {
-                                        py: '12px',
-                                        px: 1.5
-                                    },
-                                    '@media (max-width: 480px)': {
-                                        py: '8px',
-                                        px: 1
-                                    }
-                                }}>
+                                <TimelineContent sx={{ py: '12px', px: 2 }}>
                                     <EducationCard education={item}/>
                                 </TimelineContent>
                             </TimelineItem>
                         ))}
+                    </Timeline>
                 </TimelineSection>
             </Wrapper>
         </Container>
