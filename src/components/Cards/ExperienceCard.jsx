@@ -41,7 +41,7 @@ const Card = styled.div`
     padding: 12px 16px;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 12px;

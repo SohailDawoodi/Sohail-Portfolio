@@ -43,12 +43,12 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
-     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-     border: 0.5px solid #3980e3;
-    }
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 0.5px solid #3980e3;
     &:hover{
-    box-shadow: 0px 0px 20px rgba(7, 173, 62, 0.3);
+        box-shadow: 0px 0px 20px rgba(7, 173, 62, 0.3);
         transform: translateY(-10px);
+        // border: 0.1px solid  lightgray;
     }
     @media only screen and (max-width: 768px){
         padding: 10px;
@@ -65,7 +65,10 @@ const Card = styled.div`
         -webkit-line-clamp: unset;
 
     }
+
+    // box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `
+
 
 const Top = styled.div`
     width: 100%;
