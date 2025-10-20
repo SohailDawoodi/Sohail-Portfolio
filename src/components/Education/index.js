@@ -83,36 +83,33 @@ const TimelineSection = styled.div`
     }
 `;
 
-const Education = () => {
-  return (
-    <Container id="education">
-      <Wrapper>
-        <Title>Education</Title>
-        <Desc>
-          My education has been a journey of self-discovery and growth. My educational details are as follows.
-        </Desc>
+const index = () => {
+    return (
+        <Container id="experience">
+            <Wrapper>
+                <Title>Experience</Title>
+                <Desc>
+                    My work experience as a software engineer and working on different companies and projects.
+                </Desc>
+                <TimelineSection>
+                    <Timeline>
+                        {education.map((experience,index) => (
+                            <TimelineItem>
+                                <TimelineSeparator>
+                                    <TimelineDot variant="outlined" color="secondary" />
+                                    {index !== education.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                                </TimelineSeparator>
+                                <TimelineContent sx={{ py: '12px', px: 2 }}>
+                                    <EducationCard experience={education[index]}/>
+                                </TimelineContent>
+                            </TimelineItem>
+                        ))}
+                    </Timeline>
 
-        <TimelineSection>
-          {/* ✅ Timeline را اضافه کن */}
-          <Timeline position='alternate'>
-            {education.map((item, idx) => (
-              <TimelineItem key={idx}>
-                <TimelineSeparator>
-                  <TimelineDot variant="outlined" color="secondary" />
-                  {idx !== education.length - 1 && (
-                    <TimelineConnector style={{ background: '#854CE6' }} />
-                  )}
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                  <EducationCard education={item} />
-                </TimelineContent>
-              </TimelineItem>
-            ))}
-          </Timeline>
-        </TimelineSection>
-      </Wrapper>
-    </Container>
-  );
-};
+                </TimelineSection>
+            </Wrapper>
+        </Container>
+    )
+}
 
-export default Education;
+export default index;
