@@ -1,6 +1,7 @@
+// ...existing code...
 import React from 'react'
 import styled from 'styled-components'
-import Timeline from '@mui/lab/Timeline'; // این خط را آنکامنت کنید
+import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
@@ -72,44 +73,39 @@ const TimelineSection = styled.div`
     align-items: center;
     justify-content: center;
     gap: 12px;
-    @media (max-width: 768px) {
-        padding: 0 20px;
-        max-width: 100%;
-    }
-    
-    @media (max-width: 480px) {
-        padding: 0 15px;
-        gap: 8px;
-    }
 `;
 
-const index = () => {
-    return (
-        <Container id="experience">
-            <Wrapper>
-                <Title>Experience</Title>
-                <Desc>
-                    My work experience as a software engineer and working on different companies and projects.
-                </Desc>
-                <TimelineSection>
-                    <Timeline>
-                        {education.map((experience,index) => (
-                            <TimelineItem>
-                                <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== education.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
-                                </TimelineSeparator>
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <EducationCard experience={education[index]}/>
-                                </TimelineContent>
-                            </TimelineItem>
-                        ))}
-                    </Timeline>
+const Education = () => {
+  return (
+    <Container id="education">
+      <Wrapper>
+        <Title>Education</Title>
+        <Desc>
+          My education has been a journey of self-discovery and growth. My educational details are as follows.
+        </Desc>
 
-                </TimelineSection>
-            </Wrapper>
-        </Container>
-    )
-}
+        <TimelineSection>
+          {/* مثل بخش Experience، بدون position تا استایل مشابه اعمال شود */}
+          <Timeline>
+            {education.map((item, idx) => (
+              <TimelineItem key={idx}>
+                <TimelineSeparator>
+                  <TimelineDot variant="outlined" color="secondary" />
+                  {idx !== education.length - 1 && (
+                    <TimelineConnector style={{ background: '#854CE6' }} />
+                  )}
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: '12px', px: 2 }}>
+                  <EducationCard education={item} />
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </TimelineSection>
+      </Wrapper>
+    </Container>
+  );
+};
 
-export default index;
+export default Education;
+// ...existing code...
